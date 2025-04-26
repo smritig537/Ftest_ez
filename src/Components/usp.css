@@ -1,0 +1,152 @@
+/* usp.css */
+
+.usp-wrapper {
+  padding: 40px;
+  background: #f9fafb;
+}
+
+.usp-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.usp-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* Left Section */
+.usp-left {
+  flex: 1;
+}
+
+.rule-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 40px;
+}
+
+.rule-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+  position: relative;
+}
+
+.rule-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.rule-dot-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.rule-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #1e3a8a;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.rule-line {
+  width: 2px;
+  height: 60px;
+  background-color: #1e3a8a;
+  margin-top: 2px;
+}
+
+.rule-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rule-number-label {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.rule-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.rule-label {
+  font-size: 16px;
+  color: #1e3a8a;
+}
+
+.rule-action {
+  background-color: #e5e7eb;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Right Section */
+.usp-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0f172a;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-back {
+  background: #0f172a;
+  transform: rotateY(180deg);
+  font-size: 16px;
+  font-weight: 400;
+}
